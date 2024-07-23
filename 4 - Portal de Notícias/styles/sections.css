@@ -1,16 +1,40 @@
+section header {
+    border-top: 1px solid var(--stroke-color);
+    padding-block: 12px 24px;
+    font: var(--text-span);
+    
+}
+
+section header a {
+    justify-self: end;
+    align-items: center;
+    gap: 8px;
+}
+
+section header a:hover span {
+    background-image: url(../assets/icons/ArrowRight-hover.svg);
+}
+
+
+section header a span {
+    background-image: url(../assets/icons/ArrowRight.svg);
+    height: 16px;
+    width: 16px;
+}
+
 #featured img {
     height: 100%;
     object-fit: cover;
     border-radius: 4px;
 }
 
-.card {
+#featured .card {
     border-radius: 4px;
     overflow: hidden;
     position: relative;
 }
 
-.card::before {
+#featured .card::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -22,7 +46,7 @@
     );
 }
 
-.card figcaption {
+#featured .card figcaption {
     position: absolute;
     bottom: 0;
 
@@ -31,10 +55,33 @@
     
 }
 
-.card figcaption h2 {
+#featured .card figcaption h2 {
     margin-top: 8px;
 }
 
-.card figcaption:has(.text-lg) {
+#featured .card figcaption:has(.text-lg) {
     padding: 12px;
+}
+
+#weekly img {
+    height: 160px;
+}
+
+#weekly>div {
+    grid-template-columns: repeat(4, 292px);
+}
+
+#weekly figure {
+    position: relative;
+}
+
+#weekly figure .content-tag {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+#weekly figure p {
+    margin-top: 8px;
+    font-weight: 800;
 }
