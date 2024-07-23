@@ -34,3 +34,7 @@
 .card figcaption h2 {
     margin-top: 8px;
 }
+
+.card figcaption:has(.text-lg) {
+    padding: 12px;
+}
