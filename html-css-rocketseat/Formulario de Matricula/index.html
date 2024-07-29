@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./styles/layout.css">
     <link rel="stylesheet" href="./styles/forms.css">
     <link rel="stylesheet" href="./styles/fields/index.css">
+    <link rel="stylesheet" href="./styles/fields/droparea.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
@@ -54,19 +55,61 @@
 
                         <div class="textarea-wrapper">
                             <label for="medical-info">Informações médicas</label>
-                            <textarea name="medical-info" placeholder="A criança possui alguma condição médica que a escola deve estar ciente?" id="medical-info" cols="30" rows="10"></textarea>
+                            <textarea name="medical-info" placeholder="A criança possui alguma condição médica que a escola deve estar ciente?" id="medical-info" cols="30" rows="6"></textarea>
                         </div>
 
                         <div class="droparea-wrapper">
-                            <input type="file" id="birth-file" name="birth-file">
-                            <img src="assets/icons/cloud-upload.svg" alt="">
-                            <p>
-                                CLique aqui para <br>
-                                selecionaros arquivos
-                            </p>
+                            <label for="birth-file">Certidão de Nascimento</label>
+
+                            <div class="dropzone">
+                                <input type="file" id="birth-file" name="birth-file">
+                                <img src="assets/icons/cloud-upload.svg" alt="">
+                                <p>
+                                    Clique aqui para <br>
+                                    selecionaros arquivos
+                                </p>
+                            </div>
                         </div>
 
                     </fieldset>
+
+                    <fieldset class="address">
+                        <legend>Endereço residencial</legend>
+                        <div class="input-wrapper">
+                            <label for="cep">CEP</label>
+                            <input type="text" id="cep" name="cep">
+                        </div>
+
+                        <div class="flex">
+                            <div class="input-wrapper flex-2">
+                                <label for="street">Rua</label>
+                                <input type="text" id="street" name="street" value="Rua das Flores" disabled>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div class="input-wrapper flex-1">
+                                <label for="number">Número</label>
+                                <input type="number" id="number" name="number">
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div class="input-wrapper flex-2">
+                                <label for="cidade">Cidade</label>
+                                <input type="text" id="cidade" name="cidade" value="São Paulo" disabled>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div class="input-wrapper flex-1">
+                                <label for="state">Estado</label>
+                                <input type="text" id="state" name="state" value="São Paulo" disabled>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
                 </form>
             </div>
         </main>
